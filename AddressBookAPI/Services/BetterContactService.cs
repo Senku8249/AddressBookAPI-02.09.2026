@@ -6,6 +6,14 @@ namespace AddressBookAPI.Services
 {
     public class BetterContactService : IContactService
     {
+        // замена списка на интерфейс
+        /*private readonly IContactStorage _storage;
+
+        public ContactService(IContactStorage storage, IMapper mapper)
+        {
+            _storage = storage;
+            _automapper = mapper;
+        }*/
 
         private readonly IMapper _mapper;
         private readonly List<Contact> _contacts = new();
@@ -15,6 +23,13 @@ namespace AddressBookAPI.Services
             _mapper = mapper;
         }
 
+        /* Вместо List<> использовать код ниже
+        _storage.GetAll()
+        _storage.GetById(id)
+        _storage.Add(contact)
+        _storage.Delete(id)
+
+         */
         public List<ContactDTO> GetAllContacts() =>
             _mapper.Map<List<ContactDTO>>(_contacts);
 

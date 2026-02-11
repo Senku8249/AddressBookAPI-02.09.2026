@@ -22,7 +22,8 @@ namespace AddressBookAPI
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-
+            // Add ContactStoradge
+            builder.Services.AddSingleton<IContactStorage, InMemoryContactStorage>();
 
 
             var app = builder.Build();
