@@ -3,8 +3,8 @@ using System.Text.Json;
 
 namespace AddressBookAPI.Services
 {
-    namespace AddressBookAPI.Storage
-    {
+    
+    
         public class JsonContactStorage : IContactStorage
         {
             private const string FilePath = "contacts.json";
@@ -63,4 +63,4 @@ namespace AddressBookAPI.Services
         }
     }
 
-}
+

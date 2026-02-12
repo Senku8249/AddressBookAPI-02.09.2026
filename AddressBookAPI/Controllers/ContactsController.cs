@@ -11,11 +11,11 @@ namespace AddressBookAPI.Controllers
     [ApiController]
     public class ContactsController : ControllerBase
     {
-        private readonly IContactService _contactService;
+        private readonly IContactStoradge _contactSStoradge;
 
-        public ContactsController(IContactService contactService)
+        public ContactsController(IContactStoradge contactStoradge)
         {
-            _contactService = contactService;
+            _contactStoradge = contactStoradge;
         }
 
         [HttpGet]

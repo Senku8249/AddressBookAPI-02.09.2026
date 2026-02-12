@@ -26,7 +26,7 @@ namespace AddressBookAPI
             builder.Services.AddSingleton<IContactStorage, InMemoryContactStorage>();
 
             //сторедж сервис с работой с файлами json
-            //builder.Services.AddSingleton<IContactStorage, JsonContactStorage>();
+            builder.Services.AddSingleton<IContactStorage, JsonContactStorage>();
 
 
 
