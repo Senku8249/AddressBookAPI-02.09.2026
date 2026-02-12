@@ -1,0 +1,3 @@
+IContactStorage должен возвращать ContactDTO. 
+IContactStorage должен заменить/заменять IContactService
+Для этого IContactStorage должен соответствовать IContactStorage
